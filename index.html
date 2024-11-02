@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport meta tag -->
+    <style>
+        body {
+            margin: 0;
+            font-family: "IBM Plex Mono", sans-serif; /* Set a default font */
+            background-color: #ff0000; /* Background untuk seluruh halaman */
+        }
+
+        .android-compact {
+            max-width: 412px; /* Batasi lebar maksimum */
+            margin: auto; /* Tengah */
+            position: relative;
+            padding-bottom: 40px; /* Ruang bawah */
+        }
+
+        .photo-here {
+            width: 100%; /* Responsif */
+            height: auto; /* Menjaga rasio aspek */
+            max-height: 300px; /* Tinggi maksimum */
+        }
+
+        .your-name-here {
+            text-align: center; /* Rata tengah */
+            color: #ffffff;
+            margin-top: 10px;
+            font-size: 5vw; /* Ukuran font responsif */
+        }
+
+        .intro-text {
+            text-align: center; /* Rata tengah */
+            color: #ffffff;
+            font-size: 3vw; /* Ukuran font responsif */
+            margin: 10px 5%; /* Margin untuk ruang */
+        }
+
+        .overlap-group {
+            background-image: url(./img/rectangle-9.svg);
+            background-size: cover; /* Mengisi latar belakang */
+            padding: 10px;
+            text-align: center; /* Rata tengah */
+            margin: 20px 0; /* Margin atas dan bawah */
+        }
+
+        .text-wrapper-2 {
+            color: #ffffff;
+            font-size: 3vw; /* Ukuran font responsif */
+        }
+
+        .frame {
+            display: flex;
+            justify-content: center; /* Tengah secara horizontal */
+            margin-top: 20px;
+            border-radius: 50%; /* Membuat lingkaran */
+            background-color: #ff0000;
+            padding: 20px; /* Ruang dalam */
+        }
+
+        .play-circle {
+            width: 10vw; /* Ukuran responsif */
+            height: 10vw; /* Ukuran responsif */
+        }
+
+        .worked-with {
+            text-align: center; /* Rata tengah */
+            color: #ffffff;
+            font-size: 3vw; /* Ukuran font responsif */
+            margin-top: 40px; /* Margin atas untuk ruang dari elemen lain */
+        }
+    </style>
+</head>
+<body>
+    <div class="android-compact">
+        <img class="photo-here" src="img/Screenshot 2024-06-20 122622.png" alt="Screenshot" />
+        <div class="your-name-here">
+            <p>The One and Only<br />Dicky Zibran</p>
+        </div>
+        <div class="intro-text">
+            <p>Seorang raja iblis terkuat yang pernah ada, telah bereinkarnasi atau terlahir kembali ke dunia ini untuk
+            membawa kehancuran</p>
+        </div>
+        <div class="overlap-group">
+            <div class="text-wrapper-2">Waspadalah jika berpapasan dengannya</div>
+        </div>
+        <div class="frame">
+            <img class="play-circle" src="img/images.png" alt="Play Circle" />
+        </div>
+        <div class="worked-with">
+            <p>Bekerja di PT. Mencari Cinta Sejati</p>
+        </div>
+    </div>
+    <audio id="myAudio">
+        <source src="img/The Trailblazer.mp3" type="audio/mpeg">
+    </audio>
+    <script>
+        document.querySelector('.play-circle').addEventListener('click', function() {
+            var audio = document.getElementById('myAudio');
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause(); 
+            }
+        });
+    </script>
+</body>
+</html>
